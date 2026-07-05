@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Font Awesome Link (Icons ke liye) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--Hero Section-->
+    <main>
+
+        <nav class="hero-right-nav">
+            <a href="#home" class="nav-vertical-link"><i class="fas fa-home"></i> Home</a>
+            <a href="#about" class="nav-vertical-link"><i class="fas fa-user"></i> About</a>
+            <a href="#skills" class="nav-vertical-link"><i class="fas fa-code"></i> Skills</a>
+            <a href="#projects" class="nav-vertical-link"><i class="fas fa-tasks"></i> Projects</a>
+            <a href="#blog" class="nav-vertical-link"><i class="fas fa-blog"></i> My Blog</a>
+            <a href="#contact" class="nav-vertical-link"><i class="fas fa-envelope"></i> Contact Me</a>
+        </nav>
+
+<section class="hero-profile-section">
+    <div class="hero-profile-container">
+        <div class="hero-text-content">
+        <h1 class="hero-name" >Jaspreet Singh</h1>
+        <p class="hero-role">Full-Stack Developer Intern</p>
+<!--Resume Button-->
+        <a href="JASPREET.RESUME (1).pdf" target="_blank" class="resume-hero-btn">
+            <i class="fas fa-file-download"></i> Get Resume
+        </a>
+    </div>
+<!--MY PROFILE PIC-->
+        <div class="profile-circle-container">
+            <div class="profile-image-wrapper">
+                <img src="jaspreet image.jpeg" alt="Jaspreet Singh" class="profile-circle-image">
+            </div>
+        </div>
+</div>
+</section>
+
+<!--About Section-->
+<section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>"Hi, I'm Jaspreet Singh. I'm a Web Developer specializing in building clean,rsponsive user interfaces with HTML,CSS,JavaScript and React. Beyond writing clean code, I have a strong eye for visual branding and graphic design. I love combining logic and creativity to build websites that look amazing and work flawlessly. Currently, I am expanding my technical stack into a full-stack architecture through a hands-on Web Developer Internship, mastering database integrations and API implementations."</p>
+</section>
+
+<!--Skills-->
+<section id="skills" class="skills-section">
+    <h2 class="skills-heading">My <span class="purple-highlight">Skills</span></h2>
+    <div class="skills-container">
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">ReactJS</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Mongodb</span>
+    </div>
+</section>
+
+<!--PROJECT SECTION-->
+<section id="projects" class="projects-section">
+    <h2 class="projects-main-heading">My <span class="purple-highlight">Projects</span></h2>
+    
+    <div class="projects-grid-container">
+        
+        <!-- POST 1 BAKERY -->
+        <div class="project-display-card">
+            <h3 class="project-title">1. The Golden Crust - Artisan Bakery</h3>
+            <p class="project-desc">"The Golden Crust is a fully responsive e-commerce web application designed for a modern artisan bakery. The platform features a beautifully structured, categorized menu showcasing fresh products."</p>
+            <a href="https://reliable-bavarois-fd2b2c.netlify.app/" target="_blank" class="view-project-btn">
+                View Project <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+
+        <!-- POST 2 WATCHES -->
+        <div class="project-display-card">
+            <h3 class="project-title">2. Horologe - Premium Timepiece</h3>
+            <p class="project-desc">"Horologe is a high-end, luxury e-commerce landing page and storefront design for premium watches. Featuring a sleek, minimalist dark theme, the platform delivers an immersive luxury shopping experience."</p>
+            <a href="https://watchesweb.netlify.app/" target="_blank" class="view-project-btn">
+                View Project <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+
+        <!-- Project 3 Card -->
+        <div class="project-display-card">
+            <h3 class="project-title">3. Drinks Website</h3>
+            <p class="project-desc">"A dynamic web interface integrating real-time API mechanics to curate customized beverage suggestions mapping directly to local climate and user preference matrices."</p>
+            <a href="#" target="_blank" class="view-project-btn">
+                View Project <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!--Blog Section-->
+<section id="blog" class="blog-section">
+    <h2>My Blog</h2>
+    <div class="blog-list">
+        <!--Blog Post 1 Inernship-->
+        <article class="blog-card">
+            <h3>1) Day 1: Starting My Journey as a Full-Stack Web Developer Intern</h3>
+            <span class="blog-date">Published: July 2, 2026</span>
+            <p>Accelerating my engineering skills through a hands-on Web Developer Internship focused on Full-Stack infrastructure. I am currently building scalable frontend components and architecting secure RESTful APIs to connect database management systems (DBMS).</p>
+            <a href="admin.html" class="read-more">Read Article</a>
+        </article>
+    </div>
+        <!--Blog Post 2 Bakery-->
+        <article class="blog-card">
+            <h3>2) Building "The Golden Crust": Managing Cart Logic in JavaScript</h3>
+            <span class="blog-date">Published: April 30, 2026</span>
+            <p>A look into the frontend architecture and dynamic product filtering built for an artisan bakery e-commerce site.</p>
+            <a href="admin.html" class="read-more">Read Article</a>
+        </article>
+</section>
+     </main>
+
+     <!--Contact section-->
+     <section id="contact" class="contact-form-section">
+    <div class="form-container">
+        <h2 class="form-heading">GET IN <span class="purple-highlight">TOUCH.</span></h2>
+        
+        <!-- Interactive Form Layout -->
+        <form class="premium-contact-form" action="#" method="POST">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required class="form-input">
+            </div>
+            
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" required class="form-input">
+            </div>
+            
+            <div class="form-group">
+                <input type="tel" name="phone" placeholder="Your Phone Number" class="form-input">
+            </div>
+            
+            <div class="form-group">
+                <!-- Dropdown for Purpose -->
+                <select name="purpose" class="form-input form-select" required>
+                    <option value="" disabled selected hidden>Purpose of Contact</option>
+                    <option value="web-project">Website Development</option>
+                    <option value="logo-design">Graphic / Logo Design</option>
+                    <option value="freelance">Freelance Collaboration</option>
+                    <option value="other">Other Inquiry</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <textarea name="message" rows="5" placeholder="Tell me about your vision..." required class="form-input form-textarea"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-form-btn">
+                SEND MESSAGE <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+</section>
+
+<!--Footer Section-->
+<footer class="portfolio-footer">
+    <div class="footer-container">
+        <p class="copyright-text">&copy; 2026 Jaspreet Singh. All Rights Reserved</p>
+    </div>
+</footer>
+
+    <!-- Icons Wrapper centered with Flexbox directly -->
+    <div style="display: flex; justify-content: center; align-items: center; gap: 25px; margin-top: 15px;">
+        
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/Jaspreet Singh" target="_blank" style="text-decoration: none !important; display: inline-block;">
+            <i class="fab fa-linkedin" style="font-size: 36px; color: #0077b5;"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/jasp.reet157" target="_blank" style="text-decoration: none !important; display: inline-block;">
+            <i class="fab fa-instagram" style="font-size: 36px; color: #e1306c;"></i>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/jaspreet-2060" target="_blank" style="text-decoration: none !important; display: inline-block;">
+            <i class="fab fa-github" style="font-size: 36px; color: #171515;"></i>
+        </a>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

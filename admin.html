@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Write Articles</title>
+    <!-- Font Awesome (Icons ke liye) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px;">
+
+    <!-- Dashboard Container -->
+    <div style="max-width: 800px; margin: 0 auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        
+        <h1 style="color: #333; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px;">
+            <i class="fas fa-user-shield"></i> Admin Blog Dashboard
+        </h1>
+
+        <!-- ================= BLOG 1: INTERNSHIP ================= -->
+        <div style="background: #fdfdfd; padding: 20px; border: 1px solid #e0e0e0; border-radius: 6px; margin-bottom: 30px;">
+            <h2 style="color: #0077b5; margin-top: 0;"><i class="fas fa-laptop-code"></i> Blog 1: Full-Stack Internship Journey</h2>
+            
+            <label style="font-weight: bold; display: block; margin-bottom: 5px;">Article Title:</label>
+            <input type="text" value="Day 1: My Journey as a Full-Stack Developer Intern" style="width: 100%; padding: 10px; font-size: 16px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+
+            <label style="font-weight: bold; display: block; margin-bottom: 5px;">Write Full Article Here:</label>
+            <!-- Bada article likhne ke liye textarea -->
+            <textarea rows="12" style="width: 100%; padding: 12px; font-size: 15px; border: 1px solid #ccc; border-radius: 4px; line-height: 1.6; resize: vertical; box-sizing: border-box;" placeholder="Yahan apna internship ka bacha hua bada article likhein...">Today marks an incredible milestone as I officially kick off my hands-on Web Developer Internship! The primary objective for this phase is diving headfirst into full-stack architecture, shifting away from simple static pages toward highly scalable engineering solutions. On Day 1, my core focus was setting up modular frontend components while conceptualizing how our RESTful APIs will securely route and map system data. 
+
+A significant portion of my time was spent planning out clean semantic HTML structures and optimizing responsive layout systems using CSS flexbox grids. But the real structural planning happens behind the scenes; I am drafting data schemas that will seamlessly connect our active user interfaces with Node.js and Express backend routing servers. Understanding dynamic data management systems (DBMS) is going to be the absolute backbone of this role. The goal is to ensure that every user action on the frontend triggers a secure, optimized query in the database. Looking forward to expanding my engineering skills and shipping production-ready features over the coming weeks!</textarea>
+            
+            <button style="margin-top: 15px; background-color: #0077b5; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 4px; cursor: pointer;">
+                <i class="fas fa-paper-plane"></i> Save Internship Blog
+            </button>
+        </div>
+
+
+        <!-- ================= BLOG 2: BAKERY PROJECT ================= -->
+        <div style="background: #fdfdfd; padding: 20px; border: 1px solid #e0e0e0; border-radius: 6px;">
+            <h2 style="color: #d2691e; margin-top: 0;"><i class="fas fa-bread-slice"></i> Blog 2: The Golden Crust Bakery Project</h2>
+            
+            <label style="font-weight: bold; display: block; margin-bottom: 5px;">Article Title:</label>
+            <input type="text" value="Building 'The Golden Crust': Managing Cart Logic in JavaScript" style="width: 100%; padding: 10px; font-size: 16px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+
+            <label style="font-weight: bold; display: block; margin-bottom: 5px;">Write Full Article Here:</label>
+            <!-- Bada article likhne ke liye textarea -->
+            <textarea rows="12" style="width: 100%; padding: 12px; font-size: 15px; border: 1px solid #ccc; border-radius: 4px; line-height: 1.6; resize: vertical; box-sizing: border-box;" placeholder="Yahan apna bakery project ka bacha hua bada article likhein...">Building 'The Golden Crust'—a fully functional artisan bakery e-commerce platform—has been an absolute masterclass in frontend data architecture and logic. The foundational challenge was avoiding cluttered interfaces by engineering a highly responsive real-time product filtering system. Using JavaScript array manipulation methods like .filter() and custom DOM manipulation, users can now instantly sort through categories like artisan pizzas, breads, and premium cakes without experiencing a single sluggish page reload. 
+
+Beyond category filtering, the absolute crown jewel of this project is the state-tracked shopping cart architecture. Every single addition, quantity modification, or item removal updates a global state object in real-time. I implemented custom JavaScript logic to dynamically calculate sub-totals, map specific product IDs, and automatically recalculate pricing structures on the fly. The user interface remains completely fluid while accurately mirroring the user's intended order state. The immediate next phase of development involves migrating this local state architecture over to a persistent backend DBMS table so user orders are permanently saved and managed on a live administrative dashboard!</textarea>
+            
+            <button style="margin-top: 15px; background-color: #d2691e; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 4px; cursor: pointer;">
+                <i class="fas fa-paper-plane"></i> Save Bakery Blog
+            </button>
+        </div>
+
+    </div>
+
+</body>
+</html>

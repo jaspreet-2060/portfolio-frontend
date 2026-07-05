@@ -1,0 +1,577 @@
+:root {
+    --bg-main: #0a0516;       /* Deep space rich dark background */
+    --bg-card: #140e28;       /* Slick lighter purple-dark for cards */
+    --primary-purple: #a855f7; /* Vibrant electric purple accent */
+    --purple-glow: #c084fc;    /* Light purple for borders and neon glow */
+    --text-main: #f3f4f6;      /* Off-white crisp text for readability */
+    --text-muted: #9ca3af;     /* Soft slate gray for descriptions */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* ========================================================
+   BLOG SECTION CENTERING ONLY (NO DESIGN CHANGES)
+======================================================== */
+.blog-section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center; /* Heading aur container block ko center karne ke liye */
+}
+
+/* Ye container aapke cards ko horizontal side-by-side rakhega aur page ke center me layega */
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Isse aapke saare cards center me align ho jayenge */
+    gap: 30px;
+    width: 100%;
+}
+
+/* Individual blog cards ka block wrapper center check */
+.blog-card {
+    /* Jo design pehle se hai wahi rahega, bas centering layout control handles automatically trigger honge */
+    margin: 0 auto; 
+}
+
+
+/* ========================================================
+   BLOG & WORK SECTIONS
+======================================================== */
+.blog-section, .work-section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;  
+}
+
+h2 {
+    font-size: 36px;
+    color: var(--text-main);
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+/* Heading ke neeche cool purple line decoration */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-purple);
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--primary-purple);
+}
+
+/* Flex grid container for blog cards */
+.blog-container, .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; 
+}
+
+/* ========================================================
+   PREMIUM PURPLE CARDS STYLING
+======================================================== */
+.blog-card, .project-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(168, 85, 247, 0.15); /* Subdued purple border */
+    border-radius: 12px;
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card Hover Effects - Dynamic lift and elegant outer glow */
+.blog-card:hover, .project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-purple);
+    box-shadow: 0 15px 35px rgba(168, 85, 247, 0.25);
+}
+
+.blog-card h3, .project-card h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.blog-date {
+    display: block;
+    font-size: 13px;
+    color: var(--primary-purple);
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.blog-card p, .project-card p {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* ========================================================
+   NEON READ MORE / VIEW PROJECT BUTTONS
+======================================================== */
+.read-more, .view-project {
+    display: inline-block;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary-purple), #7c3aed);
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+}
+
+.read-more:hover, .view-project:hover {
+    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+/* ========================================================
+   CONTACT SECTION (DIRECT EMBED MATCH)
+======================================================== */
+/* Note: HTML inline overrides background, but CSS handles layout perfectly */
+.contact-section h2 {
+    color: #ffffff !important;
+}
+
+.contact-section p {
+    color: var(--text-muted) !important;
+}
+
+/* Social Icon Hover transitions for the inline footer */
+.contact-section div a {
+    transition: transform 0.3s ease !important;
+}
+
+.contact-section div a:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.contact-section div a i {
+    transition: color 0.3s ease, filter 0.3s ease !important;
+}
+
+/* Icons change color cleanly to pure white/purple glowing shadows on dark theme */
+.contact-section div a:hover i.fa-linkedin {
+    color: #0077b5 !important;
+    filter: drop-shadow(0 0 8px #0077b5);
+}
+
+.contact-section div a:hover i.fa-instagram {
+    color: #e1306c !important;
+    filter: drop-shadow(0 0 8px #e1306c);
+}
+
+.contact-section div a:hover i.fa-github {
+    color: var(--purple-glow) !important;
+    filter: drop-shadow(0 0 8px var(--primary-purple));
+}
+
+/* ========================================================
+   CONTACT FORM INTEGRATION WITH DEEP BLUE THEME
+======================================================== */
+.contact-form-section {
+    padding: 80px 20px;
+    background-color: #030114; /* Pure dark matching your layout edge */
+}
+
+.form-container {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.form-heading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+}
+
+.purple-highlight {
+    color: #a855f7;
+    text-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+.premium-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Fields Styling - Blends perfectly with your blue-tint image tone */
+.form-input {
+    width: 100%;
+    padding: 15px 18px;
+    background-color: #0c0926; /* Deep navy box tint */
+    border: 1px solid rgba(168, 85, 247, 0.15);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-input::placeholder {
+    color: #6b7280;
+}
+
+/* Input Focus Glow state */
+.form-input:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+    background-color: #110d33;
+}
+
+/* Custom design for dropdown select arrow */
+.form-select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='white'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+}
+
+.form-textarea {
+    resize: none;
+}
+
+/* Royal Blue Button to contrast flawlessly with the purple labels */
+.submit-form-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #1d4ed8, #2563eb); 
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-form-btn:hover {
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+    .form-heading { font-size: 28px; }
+    .form-input { padding: 12px 15px; }
+}
+
+/* Footer */
+.portfolio-footer {
+    background-color: #030114; /* Pure dark matching your layout tone */
+    padding: 30px 20px;
+    border-top: 1px solid rgba(168, 85, 247, 0.1); /* Subtle glowing divider line */
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.copyright-text {
+    color: #6b7280; /* Soft slate gray for clean contrast */
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+
+/* Hero text Jaspreet Singh*/
+.hero-name {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    
+    /* Plain white ki jagah premium multi-shade purple gradient */
+    background: linear-gradient(135deg, #ffffff 30%, #c084fc 70%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Halki si text shadow background par depth dene ke liye */
+    filter: drop-shadow(0px 4px 12px rgba(168, 85, 247, 0.35));
+}
+
+.hero-role {
+    font-size: 16px;
+    /* Soft metallic slate shade text jo background par premium lage */
+    color: #a78bfa; 
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.9;
+}
+
+/* RESUME */
+.resume-hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px; /* Text se thoda door rakhne ke liye */
+    padding: 12px 28px;
+    background: transparent;
+    border: 2px solid #a855f7; /* Purple border */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px; /* Fully rounded elegant look */
+    transition: all 0.4s ease;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.resume-hero-btn:hover {
+    background: #a855f7; /* Background fill on hover */
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+    transform: translateY(-3px);
+}
+
+/* Icon ki styling */
+.resume-hero-btn i {
+    font-size: 16px;
+}
+
+/* MY PROFILE PIC  */
+/* Container jo image ko perfect circle me squeeze karega */
+.profile-circle-container {
+    width: 280px;          /* Aap size yahan se chhota-bada kar sakte ho */
+    height: 280px;         /* Width aur height hamesha same honi chahiye */
+    border-radius: 50%;    /* Isse container round banta hai */
+    padding: 5px;          /* Border aur image ke beech ka gap */
+    background: linear-gradient(135deg, #2563eb, #a855f7); /* Blue to Purple gradient border */
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.4); /* Premium purple glow effect */
+    display: inline-block;
+    overflow: hidden;      /* Circle se bahar nikalne waale parts ko cut karega */
+}
+
+/* Main image ki sizing controls */
+.circle-profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;    /* Image ko bhi round karega */
+    object-fit: cover;     /* Sabse important! Isse image bina stretch huye perfectly fit ho jayegi */
+    object-position: center top; /* Agar face upar hai toh top set karo taaki face center me rahe */
+    background-color: #030114;
+}
+
+/* LEFT SIDE PROFILE */
+/* Container jo elements ko side-by-side (Left-Right) align karega */
+.hero-profile-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;         /* Image aur Text vertically ek barabar center rahenge */
+    justify-content: space-between; /* Text extreme left aur Image extreme right ho jayegi */
+    padding: 60px 20px;
+    gap: 40px;
+}
+
+/* Left Text Area */
+.hero-text-content {
+    flex: 1;
+    text-align: left;            /* Text ko hamesha left side align rakhega */
+}
+
+/* Right Image Area */
+.profile-circle-container {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(135deg, #2563eb, #a855f7);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+    overflow: hidden;
+    flex-shrink: 0;             /* Isse small screens par photo choti/badi hokar kharab nahi hogi */
+}
+
+.circle-profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Responsive Setting - Mobile par automatic ek ke neeche ek aane ke liye */
+@media (max-width: 768px) {
+    .hero-profile-container {
+        flex-direction: column-reverse; /* Mobile par photo upar aur text neeche center ho jayega */
+        text-align: center;
+    }
+    .hero-text-content {
+        text-align: center;
+    }
+}
+
+/* SKILLS */
+.skills-section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center; /* Heading aur container ko completely center karega */
+}
+
+.skills-heading {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Container jo saari skills ko dynamic row block me center align karega */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;           /* Screen size ke hisab se automatic line change karega */
+    justify-content: center;   /* Elements ko horizontal axis par perfect center rakhega */
+    gap: 15px;                 /* Har ek skill ke beech ka balanced space */
+    max-width: 800px;
+    margin: 0 auto;            /* Poore box block ko center me filter karne ke liye */
+}
+
+/* Premium dynamic skills elements tokens design */
+.skill-tag {
+    background-color: #0c0926; /* Dark background fields matching your tone */
+    color: #f3f4f6;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: 1px solid rgba(168, 85, 247, 0.2); /* Soft purple border structure */
+    border-radius: 30px;       /* Sleek pill shape layout */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Interactive skills tracking effects */
+.skill-tag:hover {
+    color: #ffffff;
+    border-color: #a855f7;     /* Neon purple glow element activation */
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(124, 58, 237, 0.15));
+    transform: translateY(-4px); /* Interactive lift animation */
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.25);
+}
+
+/* PROJECT SECTION */
+.projects-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Heading aur elements ko completely center karega */
+}
+
+.projects-main-heading {
+    font-size: 34px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 45px;
+}
+
+/* Flex wrapper jo cards ko responsive line me complete center align rakhega */
+.projects-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Items ko horizontal center karega */
+    gap: 30px;               /* Cards ke beech ka sleek space gap */
+    width: 100%;
+}
+
+/* Individual Premium Project Box Cards layout */
+.project-display-card {
+    background-color: #0c0926; /* Deep blue-dark color mirroring your code tone */
+    border: 1px solid rgba(168, 85, 247, 0.15);
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 360px;          /* Card width restriction */
+    text-align: left;          /* Inside card content reads naturally from left */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Card Hover micro interactions */
+.project-display-card:hover {
+    transform: translateY(-6px);
+    border-color: #a855f7;
+    box-shadow: 0 12px 25px rgba(168, 85, 247, 0.2);
+}
+
+.project-title {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.project-desc {
+    font-size: 14.5px;
+    color: #9ca3af;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Dynamic blue action buttons for View Project links */
+.view-project-btn {
+    align-self: flex-start;    /* Button fits perfectly based on text length */
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #1d4ed8, #2563eb); /* Vibrant royal blue matching form button */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.view-project-btn:hover {
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.5);
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+/* Responsive adjustment for small grids */
+@media (max-width: 768px) {
+    .projects-grid-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
